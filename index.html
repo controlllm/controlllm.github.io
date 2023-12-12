@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="ControlLLM: Augment Language Models with Tools by Searching on Graphs">
+    <meta name="keywords" content="Large Language Models">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ControlLLM</title>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="icon" href="./static/images/logo.png">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title"
+                            style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;">
+                            <img src="./static/images/logo.png" width="60" height="60" style="margin-right: 10px;">
+                            ControlLLM: 
+                        </h1>
+                        <h1 class="title is-2 publication-title">Augment Language Models with Tools <br> by Searching on Graphs</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="">Zhaoyang Liu</a><sup>12</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://zeqiang-lai.github.io/">Zeqiang Lai</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Zhangwei Gao</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Erfei Cui</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Xizhou Zhu</a><sup>23</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Lewei Lu</a><sup>4</sup>,
+                            </span>
+                            <br>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Qifeng Chen</a><sup>1*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en">Yu Qiao</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://jifengdai.org/">Jifeng Dai</a><sup>23</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://whai362.github.io/">Wenhai Wang</a><sup>2*</sup>,
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                            <span class="author-block"><sup>1</sup>The Hong Kong University of Science and Technology, <br> <sup>2</sup>OpenGVLab, Shanghai AI Laboratory, <sup>3</sup>Tsinghua University,
+                                <sup>4</sup>SenseTime</span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                            <span class="author-block">*Corresponding Author</span>
+                        </div>
+
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2310.17796" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <span class="link-block">
+                                    <a href="#" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fa fa-laugh"></i>
+                                        </span>
+                                        <span>Demo</span>
+                                    </a>
+                                </span>
+
+                                <!-- Code Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/OpenGVLab/ControlLLM"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+
+                                <!-- Video Link. -->
+                                <!-- <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=aqw2SCWeWD0"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span>Video</span>
+                                    </a>
+                                </span> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" style="padding-top: 0px;">
+        <div class="container is-max-desktop">
+            <!-- Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <!-- <h2 class="title is-2">Video</h2> -->
+                    <div class="publication-video">
+                        <video width="100%" controls autoplay>
+                            <source src="static/demo.mp4" type="video/mp4">
+                        </video>
+                        <!-- <iframe src="static/minidalle3.mp4"  border: 0">  frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                    </div>
+                </div>
+            </div>
+            <!--/ Paper video. -->
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We present ControlLLM, a novel framework that enables large language models (LLMs) to utilize multi-modal tools for solving complex real-world tasks. Despite the remark- able performance of LLMs, they still struggle with tool invocation due to ambiguous user prompts, inaccurate tool se- lection and parameterization, and inefficient tool scheduling. To overcome these challenges, our framework comprises three key components: (1) a task decomposer that breaks down a complex task into clear subtasks with well- defined inputs and outputs; (2) a Thoughts-on-Graph (ToG) paradigm that searches the optimal solution path on a pre- built tool graph, which specifies the parameter and depen- dency relations among different tools; and (3) an execution engine with a rich toolbox that interprets the solution path and runs the tools efficiently on different computational devices. We evaluate our framework on diverse tasks involving image, audio, and video processing, demonstrating its superior accuracy, efficiency, and versatility compared to existing methods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Overall Framework</h2>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <p>The framework consists of three stages. The first stage is task decomposition, which parses the user input into several subtasks. Then, in Stage 2, ToG utilizes a depth-first search algorithm to find the optimal solution for each subtask. The execution engine in the last stage executes the solution and returns the output to users. We here use the example of generating a web page for the video to illustrate our method. </p>
+                    <br>
+                    <img style="display: inline-block;width: 100%;max-height: 400px;" src="./static/images/framework.png">
+
+                </div>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <h3 class="title is-3">Thoughts on Graphs</h3>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <p>Comparison of different paradigms for task planning. (a) Chain of Thought (CoT) [34], CoT with self-consistency [33] and (b) Tree of Thoughts [38] (ToT) essentially rely on the LLMs to perform task planning, where the edge is actually formed by LLMs at run time. (c) The Thoughts-on-Graph (ToG) paradigm in our method searches for solutions on a pre-built graph that captures the dependencies of tools, which avoids the hallucination problem in tool invocation. </p>
+                    <br>
+                    <img style="display: inline-block;width: 100%;" src="./static/images/tog.png">
+                </div>
+            </div>
+
+
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Features</h2>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <p>The table shows that our framework supports more features that facilitate the user experience of multi-modal interaction. It proves the high scalability of our framework.</p>
+                    <br>
+                    <img style="display: inline-block;width: 100%;" src="./static/images/cmp.png">
+                </div>
+            </div>
+
+
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Results</h2>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/example.png">
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">BibTeX</h2>
+                <br>
+            </div>
+            <div class="columns is-centered">
+            <pre><code>@article{2023controlllm,
+    title={ControlLLM: Augment Language Models with Tools by Searching on Graphs},
+    author={Liu, Zhaoyang and Lai, Zeqiang and Gao Zhangwei and Cui, Erfei and Li, Zhiheng and Zhu, Xizhou and Lu, Lewei and Chen, Qifeng and Qiao, Yu and Dai, Jifeng and Wang Wenhai},
+    journal={arXiv preprint arXiv:2305.10601},
+    year={2023}
+}
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered ">
+                <div class="column is-8">
+                    <div class="content">
+                        <p style="text-align: center;">
+                            The webpage is built based on <a href="https://next-gpt.github.io/">NExT-GPT</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
