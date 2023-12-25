@@ -56,35 +56,35 @@
                         <h1 class="title is-2 publication-title">Augment Language Models with Tools <br> by Searching on Graphs</h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a href="">Zhaoyang Liu</a><sup>12</sup>,
+                                <a href="https://scholar.google.com/citations?user=btgwZosAAAAJ&hl=zh-CN">Zhaoyang Liu</a><sup>12*</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://zeqiang-lai.github.io/">Zeqiang Lai</a><sup>2</sup>,
+                                <a href="https://zeqiang-lai.github.io/">Zeqiang Lai</a><sup>2*</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Zhangwei Gao</a><sup>2</sup>,
+                                <a href="https://github.com/G-z-w">Zhangwei Gao</a><sup>2</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Erfei Cui</a><sup>2</sup>,
+                                <a href="https://github.com/ErfeiCui">Erfei Cui</a><sup>2</sup>,
                             </span>
                             <span class="author-block">
                                 <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Xizhou Zhu</a><sup>23</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Lewei Lu</a><sup>4</sup>,
+                                <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ">Lewei Lu</a><sup>4</sup>,
                             </span>
                             <br>
                             <span class="author-block">
-                                <a href="https://scholar.google.com/citations?user=02RXI00AAAAJ&hl=en">Qifeng Chen</a><sup>1*</sup>,
+                                <a href="https://cqf.io/">Qifeng Chen</a><sup>1✉</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en">Yu Qiao</a><sup>2</sup>,
+                                <a href="http://mmlab.siat.ac.cn/yuqiao/index.html">Yu Qiao</a><sup>2</sup>,
                             </span>
                             <span class="author-block">
                                 <a href="https://jifengdai.org/">Jifeng Dai</a><sup>23</sup>,
                             </span>
                             <span class="author-block">
-                                <a href="https://whai362.github.io/">Wenhai Wang</a><sup>2*</sup>,
+                                <a href="https://whai362.github.io/">Wenhai Wang</a><sup>2✉</sup>,
                             </span>
                         </div>
 
@@ -94,7 +94,8 @@
                         </div>
 
                         <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-                            <span class="author-block">*Corresponding Author</span>
+                            <span class="author-block">*Equal Contribution</span>
+                            <span class="author-block">✉Corresponding Author</span>
                         </div>
 
 
@@ -111,7 +112,7 @@
                                 </span>
 
                                 <span class="link-block">
-                                    <a href="#" target="_blank"
+                                    <a href="https://cllm.opengvlab.com/" target="_blank"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fa fa-laugh"></i>
@@ -190,6 +191,24 @@
         </div>
     </section>
 
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Thoughts on Graphs</h2>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <p>By using the multimodal interaction framework ControlLLM, it is possible to use LLM as the main controller, integrate tools with different functions as plugins, and use the proposed Thoughts on Graph (TOG) algorithm for reasonable task decomposition, tool selection, and efficient tool execution tuning, making the model more efficient and accurate in understanding user needs. </p>
+                    <br>
+                    <img style="display: inline-block;width: 100%;max-height: 400px;" src="./static/images/tog2.png">
+
+                </div>
+            </div>
+
+    </section>
 
     <section class="section">
         <div class="container is-max-desktop">
@@ -205,19 +224,6 @@
                     <br>
                     <img style="display: inline-block;width: 100%;max-height: 400px;" src="./static/images/framework.png">
 
-                </div>
-            </div>
-
-            <div class="columns is-centered has-text-centered">
-                <h3 class="title is-3">Thoughts on Graphs</h3>
-                <br>
-            </div>
-
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-four-fifths">
-                    <p>Comparison of different paradigms for task planning. (a) Chain of Thought (CoT) [34], CoT with self-consistency [33] and (b) Tree of Thoughts [38] (ToT) essentially rely on the LLMs to perform task planning, where the edge is actually formed by LLMs at run time. (c) The Thoughts-on-Graph (ToG) paradigm in our method searches for solutions on a pre-built graph that captures the dependencies of tools, which avoids the hallucination problem in tool invocation. </p>
-                    <br>
-                    <img style="display: inline-block;width: 100%;" src="./static/images/tog.png">
                 </div>
             </div>
 
@@ -253,11 +259,32 @@
 
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <img style="display: inline-block;width: 100%;" src="./static/images/example.png">
+                    <p>Three implementations were provided using ControlLLM, which were compared with HuggingGPT, Visual ChatGPT, InternGPT, and GPT4Tools. It can be seen that it exhibits excellent performance in tool selection, parameter inference, and overall solution effectiveness, surpassing the most advanced methods in the field.</p>
+                    <br>
+                    <img style="display: inline-block;width: 100%;" src="./static/images/result.png">
                 </div>
             </div>
     </section>
 
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns is-centered has-text-centered">
+                <h2 class="title is-2">Examples</h2>
+                <br>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/image-perception.png">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/image-image-editing.png">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/generation.png">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/video-audio.png">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/complex.png">
+                    <img style="display: inline-block;width: 100%;" src="./static/images/examples/complex2.png">
+                </div>
+            </div>
+    </section>
 
 
 
